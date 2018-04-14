@@ -3,8 +3,8 @@
  */
 const BACKGROUND = '#0099FF';
 const GAME = document.getElementById('game');
-const GAME_WIDTH = 600;
-const GAME_HEIGHT = 600;
+const GAME_WIDTH = 400;
+const GAME_HEIGHT = 400;
 GAME.style.backgroundColor = BACKGROUND;
 GAME.style.width = GAME_WIDTH + 'px';
 GAME.style.height = GAME_HEIGHT + 'px';
@@ -93,10 +93,10 @@ function createRock(x) {
       rock.remove();
     }
   }
-  
+
   let handle = window.requestAnimationFrame(moveRock);
   frameHandles.push(handle);
-  
+
   ROCKS.push(rock);
   return rock;
 }
@@ -108,7 +108,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  clearInterval(gameInterval);  
+  clearInterval(gameInterval);
   window.removeEventListener("keydown", moveDodger);
 
   ROCKS.forEach(rock => rock.remove());
