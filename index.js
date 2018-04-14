@@ -112,7 +112,7 @@ function endGame() {
   window.removeEventListener("keydown", moveDodger);
 
   ROCKS.forEach(rock => rock.remove());
-  frameHandles.forEach(handle => window.cancelAnimationFrame(handle));
+  // frameHandles.forEach(handle => window.cancelAnimationFrame(handle));
 
   alert("YOU LOSE!");
   // reset();
