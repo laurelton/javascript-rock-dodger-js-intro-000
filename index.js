@@ -115,7 +115,7 @@ function endGame() {
   frameHandles.forEach(handle => window.cancelAnimationFrame(handle));
 
   alert("YOU LOSE!");
-  reset();
+  // reset();
 }
 
 function moveDodger(e) {
